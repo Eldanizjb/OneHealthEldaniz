@@ -27,6 +27,7 @@ namespace OneHealth.Data
         public DbSet<Paraqraph> Paraqraph { get; set; }
         public DbSet<Partner> Partner { get; set; }
         public DbSet<Setting> Setting { get; set; }
+        public DbSet<Sosial> Sosial { get; set; }
         public DbSet<Tag> Tag { get; set; }
         public DbSet<TagToNews> TagToNews { get; set; }
         public DbSet<TypePosition> TypePosition { get; set; }

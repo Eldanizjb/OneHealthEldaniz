@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OneHealth.Data;
 
 namespace OneHealth.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211221111514_VmRegisterTableUpdated")]
+    partial class VmRegisterTableUpdated
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -526,30 +528,6 @@ namespace OneHealth.Migrations
                     b.ToTable("Setting");
                 });
 
-            modelBuilder.Entity("OneHealth.Models.Sosial", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Icon")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("Link")
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
-
-                    b.Property<string>("Name")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Sosial");
-                });
-
             modelBuilder.Entity("OneHealth.Models.Tag", b =>
                 {
                     b.Property<int>("Id")
@@ -626,9 +604,6 @@ namespace OneHealth.Migrations
                     b.Property<string>("Phone")
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
-
-                    b.Property<string>("RoleId")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Surname")
                         .HasMaxLength(100)

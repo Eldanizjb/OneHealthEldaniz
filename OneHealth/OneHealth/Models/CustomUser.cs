@@ -25,6 +25,8 @@ namespace OneHealth.Models
         public string Phone { get; set; }
         public DateTime CreateDate { get; set; }
         public List<News> News { get; set; }
+        public string RoleId { get; set; }
+
 
 
     }

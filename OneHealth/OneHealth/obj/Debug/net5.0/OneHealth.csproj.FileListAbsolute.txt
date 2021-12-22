@@ -159,3 +159,4 @@ C:\Users\ACER\source\repos\OneHealth\OneHealth\obj\Debug\net5.0\Razor\Views\Blog
 C:\Users\ACER\source\repos\OneHealth\OneHealth\obj\Debug\net5.0\Razor\Views\BlogDetails\Index.cshtml.g.cs
 C:\Users\ACER\source\repos\OneHealth\OneHealth\obj\Debug\net5.0\Razor\Views\Contact\Index.cshtml.g.cs
 C:\Users\ACER\source\repos\OneHealth\OneHealth\obj\Debug\net5.0\Razor\Views\Doctor\Index.cshtml.g.cs
+C:\Users\ACER\source\repos\OneHealth\OneHealth\obj\Debug\net5.0\Razor\Areas\admin\Views\Account\Register.cshtml.g.cs

@@ -5,6 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Areas\doctor_3.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Areas\doctor_3.jpg">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="wwwroot\Areas\img\undraw_posting_photo.svg" />
     <None Include="wwwroot\Areas\img\undraw_profile.svg" />
     <None Include="wwwroot\Areas\img\undraw_profile_1.svg" />

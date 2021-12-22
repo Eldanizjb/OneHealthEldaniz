@@ -2,11 +2,13 @@
 using Microsoft.Extensions.Logging;
 using OneHealth.Data;
 using OneHealth.Models;
+using OneHealth.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace OneHealth.Controllers
 {
@@ -21,7 +23,16 @@ namespace OneHealth.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            VmHome model = new VmHome
+            {
+                Doctor = _context.Doctor.Include("Contact").ToList(),
+                News = _context.News.Include("CustomUser").Include("NewsCategory").Include(tn => tn.TagToNews)
+                                     .ThenInclude(t => t.Tag).ToList(),
+                Comment = _context.Comment.Include("TypePosition").ToList(),
+
+            };
+
+            return View(model);
         }
 
         public IActionResult Privacy()
